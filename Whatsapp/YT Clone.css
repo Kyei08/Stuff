@@ -1,0 +1,93 @@
+.Middleslide{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1 fr;
+}
+
+.searchInputContainer{
+  border: 1px solid #
+  margin-top : 30px;
+  margin-left: 15px;
+}
+
+.SearchInput{
+ width: 400px;
+ border-radius:20px
+ background : none;
+
+}
+
+.searchInputContainer{
+border: grid
+display: grid;
+grid-template-column: 2fr 1fr
+height: 100px;
+margin-top:25px;
+width ; 100px;
+border-radius: 20px;
+}
+
+.searchIcon{
+  height: 35px;
+  width:35px;
+  border-left: 1px solid #;
+  height:100%
+}
+
+.searchInputContainer{
+  border: 1px solid #
+
+}
+
+.searchVoiceIcon{
+  height: 35px;
+  width: 35px;
+  border-right: 1px solid #;
+  margin-left: 10px
+  margin-top: 10px
+}
+.searchVoiceIcon{
+  background-image: url("mic.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sidebar{
+  background-color: #f1f1f1;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+
+}
+.aside{
+  background-color: bisque;
+  height: 100vh;
+  position: flex;
+  left:0px;
+  top: 0;
+  bottom:0
+
+
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.nav{
+  background-color: #333;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position:fixed:
+  top
+}
