@@ -1,0 +1,53 @@
+section{
+
+  grid-column: span 4;
+  background-image:linear-gradient( lightgreen ) ;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      
+   background-image:linear-gradient(rgb(45, 80, 45), green,blue) ;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu {
+      background-color:rgb(16, 16, 28);
+      padding: 15px 20px;
+      text-align: center;
+      list-style-type: none;
+      margin: 0;
+      overflow: hidden;
+    }
+    hr{
+      background-color: black;
+      text-align: center;
+    }
+  footer {
+    background-color:rgb(16, 16, 28);
+    text-align: center;
+  
+  }
+  menu{
+    background-color: black;
+    text-align: center;
+  }
+  .hero {
+    background-image: url('Rodrii.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center; 
+       color: white;
+  text-align: center;
+  padding: 15px 20px;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 1000px;
+
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
