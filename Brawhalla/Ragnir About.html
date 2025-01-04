@@ -1,0 +1,57 @@
+
+    </DOCTYPE>
+    <html lang="en">
+<html lang="en">
+  <head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Ragnir" content="Ragnir Login Page">
+  <link rel="icon" href="Brawlhalla_ragnir_.png">
+  <link rel="stylesheet" href="Ragnir.css"> 
+  <link rel="stylesheet" href="Ragnir About.css"> 
+
+  <style>
+    body {
+      background-image: url("Brawlhalla_ragnir_.png");
+      background-size: cover; /* Adjust the image size to cover the entire screen */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      background-position: center; /* Center the image */
+      height: 600px; ;
+
+    }
+ </style>
+  <h1 class="welcome-text">Welcome to Ragnir's Login Page!</h1>
+
+  <style>
+  .welcome-text {
+    text-align: center;
+    font-size: 36px;
+    color: rgb(138, 73, 73);
+    text-shadow: 2px 2px 4px rgba(181, 229, 229, 0.5);
+  }
+  </style>
+
+  <section id="terms-and-conditions">
+  <h2>Terms and Conditions</h2>
+  <p>
+    This is a sample terms and conditions agreement. Please read carefully before proceeding.
+    [Insert your actual terms and conditions here]
+  </p>
+
+  <div class="acceptance">
+    <input type="checkbox" id="terms-checkbox" name="terms-checkbox">
+    <label for="terms-checkbox">I agree to the Terms and Conditions</label>
+    <button type="submit">Submit</button>
+  </div>
+</section>
+<form action="submit_comment.php" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="comment">Comment:</label>
+  <textarea id="comment" name="comment" rows="4" cols="50" required></textarea>
+
+  <button type="submit">Submit Comment</button>
+</form>
+  </head>

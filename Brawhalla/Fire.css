@@ -1,0 +1,140 @@
+.fire {
+  position: relative;
+  width: 100px;
+  height: 200px;
+  background-color: #ff9900;
+}
+
+.fire::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  animation: fire 2s infinite;
+}
+
+.fire::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 50px;
+  background-color: #ff9900;
+  animation: flames 1.5s infinite;
+}
+
+@keyframes fire {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes flames {
+  0% {
+    height: 50px;
+  }
+  50% {
+    height: 70px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+.dragon {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.body {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 150px;
+  background-color: #8B9467;
+  border-radius: 50px;
+}
+
+.wings {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wing-left, .wing-right {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: #8B9467;
+  border-radius: 50px;
+}
+
+.wing-left {
+  transform: rotate(-30deg);
+  left: -50px;
+}
+
+.wing-right {
+  transform: rotate(30deg);
+  right: -50px;
+}
+
+.head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #8B9467;
+  border-radius: 50px;
+}
+
+.eyes {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50px;
+}
+
+.fire-breath {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 50px;
+  background-color: #FF9900;
+  animation: fire-breath 2s infinite;
+}
+
+@keyframes fire-breath {
+  0% {
+    height: 50px;
+  }
+  50% {
+    height: 70px;
+  }
+  100% {
+    height: 50px;
+  }
+}
