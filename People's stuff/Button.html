@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surprise Button</title>
+    <style>
+        .surprise-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;,
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .surprise-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <button class="surprise-button" onclick="showSurprise()">Click here for a surprise!</button>
+
+    <script>
+        function showSurprise() {
+            alert("You clicked the button! Here's your surprise: A random number between 1 and 100.");
+            const randomNumber = Math.floor(Math.random() * 100) + 1;
+            alert("Your random number is: " + randomNumber);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Changing Element</title>
+    <style>
+        .color-changer {
+            width: 100px;
+            height: 100px;
+            background-color: #826161;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        const colorChanger = document.querySelector('.color-changer');
+
+        colorChanger.addEventListener('mouseover', () => {
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            colorChanger.style.backgroundColor = randomColor;
+        });
+    </script>
+</head>
+<body>
+    <div class="color-changer"></div>
+</body>
+</html>

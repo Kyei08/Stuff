@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .cube {
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+            perspective-origin: 50% 50%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #fff;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+        }
+        
+        .front {
+            background-color: rgba(255, 0, 0, 0.5);
+            transform: translateZ(100px);
+        }
+        
+        .back {
+            background-color: rgba(0, 0, 255, 0.5);
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        
+        .left {
+            background-color: rgba(0, 255, 0, 0.5);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        
+        .right {
+            background-color: rgba(255, 255, 0, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        
+        .top {
+            background-color: rgba(0, 255, 255, 0.5);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        
+        .bottom {
+            background-color: rgba(255, 0, 255, 0.5);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube" onmouseover="this.style.transform='rotateX(45deg) rotateY(45deg)'" 
+         onmouseout="this.style.transform='rotateX(0deg) rotateY(0deg)'" 
+         onclick="this.style.transform='rotateX(180deg) rotateY(180deg)'">
+        <div class="face front">Front</div>
+        <div class="face back">Back</div>
+        <div class="face left">Left</div>
+        <div class="face right">Right</div>
+        <div class="face top">Top</div>
+        <div class="face bottom">Bottom</div>
+    </div>
+</body>
+</html>
+

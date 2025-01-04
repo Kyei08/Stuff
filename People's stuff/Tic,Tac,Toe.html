@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            border: 2px solid black;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+</html>   
+const gameContainer = document.querySelector('.game-container');
+const cells = document.querySelectorAll('.cell');
+let currentPlayer = 'X';
+
+// Create an array to represent the game board
+const board = ['', '', '', '', '', '', '', '', ''];
+
+// Function to handle cell clicks
+function handleClick(index) {
+    if (board[index] === '' && !checkWinner()) {
+        board[index] = currentPlayer;
+        cells[index].textContent = currentPlayer;
+        currentPlayer = currentPlayer === 'X' ? 'O'   
+ : 'X';
+        checkWinner();
+    }
+}
+
+// Function to check for a winner
+function checkWinner()   
+ {
+    const winningCombinations = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    for (let combination of winningCombinations) {
+        if (board[combination[0]] !== '' &&
+            board[combination[0]]   
+ === board[combination[1]] &&
+            board[combination[0]] === board[combination[2]])   
+ {
+            alert('Player ' + board[combination[0]] + ' wins!');
+            return true;
+        }
+    }
+
+    if (board.every(cell => cell !== '')) {
+        alert('It\'s a tie!');
+        return true;
+    }
+
+    return false;
+}
+
+// Add click event listeners to cells
+cells.forEach((cell, index) => {
+    cell.addEventListener('click', () => handleClick(index));   
+
+});

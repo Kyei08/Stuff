@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animation Example</title>
+    <style>
+        .animated-div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-div"></div>
+</body>
+</html>

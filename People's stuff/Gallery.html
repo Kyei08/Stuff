@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+  <style>
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #mainImage {
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <img src="image1.jpg" alt="Image 1" onclick="changeImage(this)">
+    <img src="image2.jpg" alt="Image 2" onclick="changeImage(this)">
+    <img src="image3.jpg" alt="Image 3" onclick="changeImage(this)">
+  </div>
+  <img id="mainImage" src="image1.jpg" alt="Main Image">
+</body>
+</html>
+
+function changeImage(thumbnail) {
+  const mainImage = document.getElementById("mainImage");
+  mainImage.src = thumbnail.src;
+}

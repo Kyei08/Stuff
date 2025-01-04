@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text-Based Adventure</title>
+    <style>
+        .game-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <p id="story"></p>
+        <div id="choices"></div>
+    </div>
+    <script src="adventure.js"></script>
+</body>
+</html>
+
+const storyElement = document.getElementById('story');
+const choicesElement = document.getElementById('choices');
+
+let currentStory = 1;
+
+const storyData = [
+    {
+        text: "You find yourself standing at the edge of a forest. Do you enter or turn back?",
+        choices: [
+            { text: "Enter the forest", nextStory: 2 },
+            { text: "Turn back", nextStory: 3 }
+        ]
+    },
+    // Add more stories here
+];
+
+function updateStory() {
+    const currentStoryData = storyData[currentStory - 1];
+    storyElement.textContent = currentStoryData.text;
+
+    choicesElement.innerHTML = '';
+    currentStoryData.choices.forEach(choice => {
+        const button = document.createElement('button');
+        button.textContent = choice.text;
+        button.onclick = () => {
+            currentStory = choice.nextStory;
+            updateStory();
+        };
+        choicesElement.appendChild(button);
+    });
+}
+
+updateStory();

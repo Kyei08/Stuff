@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing Game</title>
+    <style>
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;   
+
+        }
+
+        .guess-input {
+            width: 100px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 id="title">Guessing Game</h1>
+        <p id="message">Guess a number between 1 and 100.</p>
+        <input type="number" id="guess-input" class="guess-input">
+        <button id="guess-button">Guess</button>
+    </div>
+    <script src="guessing_game.js"></script>
+</body>
+</html>
+const titleElement = document.getElementById('title');
+const messageElement = document.getElementById('message');
+const guessInputElement = document.getElementById('guess-input');
+const guessButton = document.getElementById('guess-button');
+
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
+
+function checkGuess() {
+    const guess = parseInt(guessInputElement.value);
+
+    if (guess < randomNumber) {
+        messageElement.textContent = 'Too low! Try again.';
+    } else if (guess > randomNumber) {
+        messageElement.textContent = 'Too high! Try again.';
+    } else {
+        attempts++;
+        messageElement.textContent = `Congratulations! You guessed the number in ${attempts} attempts.`;
+        titleElement.textContent = 'You Win!';
+        guessInputElement.disabled = true;
+        guessButton.disabled = true;
+    }
+}
+
+guessButton.addEventListener('click', checkGuess);

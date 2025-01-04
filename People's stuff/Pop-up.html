@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Balloon Button</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<button class="balloon-button">Release Balloons!</button>
+	<div class="balloons-container"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
+
+
+.balloon-button {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.balloons-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+.balloon {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #ff69b4;
+	transition: all 0.5s ease;
+}
+
+.balloon::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+
