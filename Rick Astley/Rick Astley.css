@@ -1,0 +1,17 @@
+body {
+  background-color: #DFFF00;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ded5d3
+  ;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ...other CSS styles for the rest of the elements */

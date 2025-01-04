@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <title>MyTube</title>
+    <link rel="stylesheet" href="AI YouTube .css">
+    <link rel="icon" href="Rick Astley.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">MyTube</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div class="user-profile">
+            <img src="Rick Astley.jpg" alt="User Profile" width="822" height="822px">
+        </div>
+    </header>
+    
+
+    <main>
+        <section class="sidebar">
+            <ul>
+                <li>Home</li>
+                <li>Trending</li>
+                <li>Subscriptions</li>
+                <li>Library</li>
+                <li>History</li>
+            </ul>
+            <style>
+              body {
+                 
+                  margin: 222;
+                  padding: 0;
+              }
+              
+              .cube {
+                  width: 200px;
+                  height: 200px;
+                  perspective: 1000px;
+                  perspective-origin: 50% 50%;
+                  transform-style: preserve-3d;
+                  transition: transform 0.5s;
+              }
+              
+              .face {
+                  position: absolute;
+                  width: 200px;
+                  height: 200px;
+                  border: 1px solid #fff;
+                  font-size: 30px;
+                  text-align: center;
+                  line-height: 200px;
+                  color: #fff;
+              }
+              
+              .front {
+                  background-color: rgba(255, 0, 0, 0.5);
+                  transform: translateZ(100px);
+              }
+              
+              .back {
+                  background-color: rgba(0, 0, 255, 0.5);
+                  transform: rotateY(180deg) translateZ(100px);
+              }
+              
+              .left {
+                  background-color: rgba(0, 255, 0, 0.5);
+                  transform: rotateY(-90deg) translateZ(100px);
+              }
+              
+              .right {
+                  background-color: rgba(255, 255, 0, 0.5);
+                  transform: rotateY(90deg) translateZ(100px);
+              }
+              
+              .top {
+                  background-color: rgba(0, 255, 255, 0.5);
+                  transform: rotateX(90deg) translateZ(100px);
+              }
+              
+              .bottom {
+                  background-color: rgba(255, 0, 255, 0.5);
+                  transform: rotateX(-90deg) translateZ(100px);
+              }
+          </style>
+      </head>
+      <section1>
+          <div class="cube" onmouseover="this.style.transform='rotateX(45deg) rotateY(45deg)'" 
+               onmouseout="this.style.transform='rotateX(0deg) rotateY(0deg)'" 
+               onclick="this.style.transform='rotateX(180deg) rotateY(180deg)'">
+              <div class="face front">Never</div>
+              <div class="face back">Gonna</div>
+              <div class="face left">Give</div>
+              <div class="face right">You</div>
+              <div class="face top">Up</div>
+              <div class="face bottom">:-)</div>
+          </div>
+      </section1>
+        </section>
+
+        <section class="video-feed">
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h4>Rick Astley - Never Gonna Give You Up</h4>
+                <p>Official Music Video</p>
+            </div>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyTube</p>
+    </footer>
+</body>
+</html>
