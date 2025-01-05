@@ -1,0 +1,41 @@
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the navigation items horizontally */
+}
+
+nav li {
+  margin: 0 10px; /* Add spacing between navigation items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333; /* Set link color */
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+nav-list {
+  border: 1px solid #ccc;
+}
+#parallax-bg {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  z-index: -1; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Change the navigation items to vertical layout on smaller screens */
+  }
+}
